@@ -11,8 +11,8 @@
 
 const body = $response.body || "";
 
-// 获取插件传递的参数
-const rawKeywords = "Claude,blg";
+// 获取 Surge 模块传递的自定义参数
+const rawKeywords = $argument || "";
 
 // 解析关键词
 const keywords = rawKeywords
