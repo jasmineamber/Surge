@@ -1,0 +1,10 @@
+#!name=V2EX 主题过滤
+#!desc=根据自定义关键字屏蔽 V2EX 主题
+#!arguments=keywords:广告
+#!arguments-desc=需要屏蔽的主题关键字，支持中英文逗号分隔
+
+[Script]
+V2EX-Filter = type=http-response,pattern=^https:\/\/www\.v2ex\.com(?:\/|$),script-path=https://raw.githubusercontent.com/jasmineamber/Surge/main/Scripts/v2ex_filter.js,requires-body=1,argument="{{{keywords}}}",debug=1
+
+[MITM]
+hostname = %APPEND% www.v2ex.com
